@@ -4,11 +4,12 @@ set -l snappath (grep --color=never "export PATH" $snapscript | awk -F":" '{prin
 set -l snapdesktop (grep --color=never "export XDG" $snapscript | awk -F":" '{print $NF}' |sed 's/\"//')
 if test -d $snappath;
 and test -d $snapdesktop
-  contains -- $snappath $PATH
-  or set -gx PATH $PATH $snappath
-  if not echo $XDG_DATA_DIRS |grep -q $snapdesktop
-    set -gx XDG_DATA_DIRS /usr/share:/usr/local/share:$snapdesktop
-  end
+  #contains -- $snappath $PATH
+  #or set -gx PATH $PATH $snappath
+  #if not echo $XDG_DATA_DIRS |grep -q $snapdesktop
+  #  set -gx XDG_DATA_DIRS /usr/share:/usr/local/share:$snapdesktop
+  #end
+  bash /etc/profile.d/snapd.sh
 else
   echo "Cannot find snap bin or desktop files"
 end
