@@ -1,3 +1,6 @@
+echo "Installing bass to source needed profile."
+echo "Press [enter] to continue or Ctrl-C to abort."
+omf install https://github.com/edc/bass
 if not test -f /usr/share/fish/completions/snap.fish
   echo "downloading completions file"
   mkdir $path/completions
