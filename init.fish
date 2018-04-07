@@ -7,7 +7,7 @@ and test -d $snapdesktop
   contains -- $snappath $PATH
   or set -gx PATH $PATH $snappath
   contains -- $snapdesktop $XDG_DATA_DIRS
-  or set -gx XDG_DATA_DIRS $XDG_DATA_DIRS $snapdesktop
+  or set -gx XDG_DATA_DIRS $XDG_DATA_DIRS /usr/share /usr/local/share $snapdesktop
 else
   echo "Cannot find snap bin or desktop files"
 end
