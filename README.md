@@ -25,6 +25,10 @@ default shell for a user, snaps are not added to the `PATH` or
 `XDG_DATA_DIRS`. Should be system agnostic, but has only been tested on Ubuntu
 17.10 and Arch.
 
+It also adds completions for the snap command (from the master branch of
+fish-shell on github) if they are missing (i.e. you are running an older
+version of fish).
+
 # License
 
 [MIT][mit] © [Rick Henry][author] et [al][contributors]
