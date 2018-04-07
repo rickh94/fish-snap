@@ -12,8 +12,9 @@
 
 ## Install
 
+(coming soon)
 ```fish
-$ omf install https://github.com/rickh94/fish-snap
+$ omf install snapd
 ```
 
 
