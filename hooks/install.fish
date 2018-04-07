@@ -1,5 +1,7 @@
-echo "Installing bass to source needed profile."
-omf install https://github.com/edc/bass
+if not type -q bass
+  echo "Installing bass to source needed profile."
+  omf install https://github.com/edc/bass
+end
 if not test -f /usr/share/fish/completions/snap.fish
   echo "downloading completions file"
   mkdir $path/completions
