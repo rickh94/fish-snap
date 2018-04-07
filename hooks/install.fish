@@ -1,6 +1,6 @@
-echo "running install script"
 if not test -f /usr/share/fish/completions/snap.fish
-  echo "downloading file"
+  echo "downloading completions file"
   mkdir $path/completions
   curl -L https://raw.githubusercontent.com/fish-shell/fish-shell/master/share/completions/snap.fish > $path/completions/snap.fish
 end
+echo "You will need to log out and back in to detect all snap programs"
